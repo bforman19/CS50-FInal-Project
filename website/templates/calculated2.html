@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %} Sign Up {% endblock %}
+
+{% block content %}
+{% if wall_videos==False %}
+<h1>{{ wall_videos }}</h1>
+{% endif %}
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/fLQhNF0nHaU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+{% for i in range(5) %}
+<h1>{{ shooting[i].title }}</h1>
+<iframe width="560" height="315" src="{{ shooting[i].url }}" frameborder="0" allowfullscreen></iframe>
+<h4>{{ shooting[i].description }}</h4>
+
+{% endfor %}
+
+{% endblock %}
+

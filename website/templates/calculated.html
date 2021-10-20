@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %} Sign Up {% endblock %}
+
+{% block content %}
+
+
+
+    <!-- <div id="youtube-player"
+    data-video="{{ shooting[1].id }}"
+    data-startseconds="{{ shooting[1].start_time }}"
+    data-endseconds="{{ shooting[1].end_time }}"
+    data-height="480"
+    data-width="640">
+</div>
+<script src="{{ shooting[1].url }}"></script>
+<script type="text/javascript">
+    function onYouTubeIframeAPIReady() {
+      var ctrlq = document.getElementById("youtube-player");
+      var player = new YT.Player('youtube-player', {
+        height: ctrlq.dataset.height,
+        width: ctrlq.dataset.width,
+        events: {
+          'onReady': function(e) {
+            e.target.cueVideoById({
+              videoId: ctrlq.dataset.video,
+              startSeconds: ctrlq.dataset.startseconds,
+              endSeconds: ctrlq.dataset.endseconds
+            });
+          }
+        }
+      });
+    }
+  </script>  -->
+  <iframewidth=”640″ height=”360″ src=”{{ shooting[1].url }}?&start={{ shooting[1].start_time }}&end={{ shooting[1].end_time }}&rel=0″ frameborder=”0″ allowfullscreen=”allowfullscreen”></iframe>
+
+
+
+{% endblock %}
+
